@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Message reciever</title>
+
+    <link rel="stylesheet" type="text/css" href="Style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Style/message.css">
+
+    <script src="Scripts/jquery-1.6.4.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/signalr/hubs"></script>
+
+    <script type="text/javascript">
+        var messages = [];
+        $(function () {
+            var application = $.connection.webpage;
+   
+            //Message recieved.
+            application.client.broadcastMessage = function (sender, message, timestamp) {
+                $('#messages').append('<li class="list-group-item"><span class="message_timestamp">' + timestamp + ': </span><span class="message_info">' + sender + ': </span>:<span class="message_standard"> ' + message + '</span></li>');
+                $("#messages").animate({ scrollTop: $('#messages')[0].scrollHeight }, 10);
+
+                //Removes empty text.
+                if ($('#messages').html() != "") $('.empty').remove();
+            };
+
+            //Console connected.
+            application.client.consoleActivity = function (message) {
+                $('#messages').append('<li class="list-group-item"><span class="message_connected">' + message + '</span></li>');
+            };
+
+            //Retrieve messages, if there are any.
+            application.client.getMessages = function (messages) {
+                $('#messages').html(""); //Clear all existing messages.
+
+                $.each($.parseJSON(messages), function () {
+                    $('#messages').append('<li class="list-group-item"><span class="message_timestamp">' + this.timestamp + ': </span><span class="message_info">' + this.sender + ': </span>:<span class="message_standard"> ' + this.text + '</span></li>');
+                    $("#messages").animate({ scrollTop: $('#messages')[0].scrollHeight }, 10);
+                });
+
+                //Adds empty text if there is no message data.
+                if ($('#messages').html() == "") $('#messages').append('<li class="list-group-item empty"><span class="message_connected">No messages.</span></li>');
+            };
+
+            // Start the connection.
+            $.connection.hub.start().done(function () {
+                $('#messages').append('<li class="list-group-item"><span class="message_info">Connection is started.</div>');
+                $('#connectStatus').css("background-color", "green");
+                $('#connectStatus').html("Online");
+                //Ask "server-side" for messages.
+                application.server.getMessages("ASC");
+            });
+
+            $(document).ready(function () {
+                $(".refreshBtn").click(function () {
+
+                    if (localStorage.getItem("currentSort") == "ASC")  {
+                        localStorage.setItem("currentSort", "DESC");
+                        $("#currentSort").html("ASC");
+                    }else{
+                        localStorage.setItem("currentSort", "ASC");
+                        $("#currentSort").html("DESC");
+                    }
+
+                    //Request messages from "server-side".
+                    application.server.getMessages(localStorage.getItem("currentSort"));
+                });
+            });    
+        });
+    </script>
+</head>
+<body>
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3>Messages<span id="connectStatus" class="glyphicon glyphicon-off pull-right">Offline</span></h3></div>
+        <div class="panel-body">
+            <ul id="messages" class="list-group">
+            </ul>
+        </div>
+        <div class="panel-footer">
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default refreshBtn">
+                  <i class="glyphicon glyphicon-transfer"></i> <span data-zh="转换" data-es="Transformar">Sort by time <span id="currentSort">DESC</span></span>
+              </button>            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

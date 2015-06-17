@@ -1,0 +1,10 @@
+C:\Users\dathe\Documents\Visual Studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Release\ConsoleApplication.exe.config
+C:\Users\dathe\Documents\Visual Studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Release\ConsoleApplication.exe
+C:\Users\dathe\Documents\Visual Studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Release\ConsoleApplication.pdb
+C:\Users\dathe\Documents\Visual Studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Release\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\dathe\Documents\Visual Studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Release\Newtonsoft.Json.dll
+C:\Users\dathe\Documents\Visual Studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Release\Microsoft.AspNet.SignalR.Client.xml
+C:\Users\dathe\Documents\Visual Studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Release\Newtonsoft.Json.xml
+C:\Users\dathe\Documents\Visual Studio 2012\Projects\ConsoleApplication\ConsoleApplication\obj\Release\ConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\dathe\Documents\Visual Studio 2012\Projects\ConsoleApplication\ConsoleApplication\obj\Release\ConsoleApplication.exe
+C:\Users\dathe\Documents\Visual Studio 2012\Projects\ConsoleApplication\ConsoleApplication\obj\Release\ConsoleApplication.pdb

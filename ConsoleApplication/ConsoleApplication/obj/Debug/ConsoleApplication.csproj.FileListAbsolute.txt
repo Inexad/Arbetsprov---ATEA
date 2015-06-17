@@ -1,0 +1,9 @@
+c:\users\dathe\documents\visual studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
+c:\users\dathe\documents\visual studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe
+c:\users\dathe\documents\visual studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
+c:\users\dathe\documents\visual studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+c:\users\dathe\documents\visual studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Debug\Newtonsoft.Json.dll
+c:\users\dathe\documents\visual studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+c:\users\dathe\documents\visual studio 2012\Projects\ConsoleApplication\ConsoleApplication\bin\Debug\Newtonsoft.Json.xml
+c:\users\dathe\documents\visual studio 2012\Projects\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.exe
+c:\users\dathe\documents\visual studio 2012\Projects\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.pdb

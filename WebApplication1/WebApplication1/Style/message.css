@@ -1,0 +1,37 @@
+﻿body {
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+}
+
+.message_info {
+    color:blue;
+}
+
+.message_standard {
+    color:#000;
+}
+
+.message_connected {
+    color:ccc;
+    font-style:italic;
+}
+
+.message_timestamp {
+    color:ccc;
+    font-style:italic;
+}
+
+#connectStatus {
+    background-color:black;
+    padding:5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#messages {
+    max-height:400px;
+    overflow-y:scroll;
+}
